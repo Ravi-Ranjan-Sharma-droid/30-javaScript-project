@@ -6,6 +6,7 @@
 }
 body {
   background: #222;
+  margin-top: -65px;
 }
 .card {
   width: 35%;
