@@ -30,8 +30,8 @@ No frameworks. No libraries. Just raw, clean code.
 
 Here’s the list of planned or completed projects:
 
-1. Weather App  
-<!-- 2. To-do List App   -->
+1. [Weather App](Weather-app) 
+2. [To-do List App](To-do-app)  
 <!-- 3. Calculator App   -->
 <!-- 4. Online Quiz App   -->
 <!-- 5. Digital Clock   -->
