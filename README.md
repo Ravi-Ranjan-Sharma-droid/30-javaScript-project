@@ -34,32 +34,11 @@ Here’s the list of planned or completed projects:
 2. To-Do List  
 3. Quiz App  
 4. Password Generator  
-5. Calculator  
-6. Quote Generator  
-7. QR Code Generator  
-8. Toast Notification  
-9. Stopwatch  
-10. Popup Modal  
-11. Show/Hide Password  
-12. Dark/Light Theme Toggle  
-13. Image Gallery  
-14. Number Counter  
-15. Tip Calculator  
-16. Currency Converter  
-17. BMI Calculator  
-18. Pomodoro Timer  
-19. Drawing App  
-20. Digital Clock  
-21. Drum Kit  
-22. Typing Speed Test  
-23. Random Joke Generator  
-24. Word Counter  
-25. Background Image Slider  
-26. Local Storage To-Do App  
-27. Accordion Tabs  
-28. Sticky Navbar  
-29. Scroll Animations  
-30. Random Color Generator  
+5. Notes app
+6. Age Calculator
+7. Quote Generator
+8. QR Code Generator
+9. More soon...
 
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
@@ -87,6 +66,6 @@ Have feedback, suggestions, or cool ideas? Open an issue or submit a PR. Let’s
 
 ## License
 
-This project is open source and licensed under the MIT License.
+This project is open source and licensed under the MIT License. [click here to read license](LICENSE)
 
 ## If you like this challenge, feel free to ⭐ star the repo and follow along with my progress!
