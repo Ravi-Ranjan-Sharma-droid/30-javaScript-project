@@ -11,6 +11,15 @@ async function checkWeather(city) {
     var data = await response.json();
     console.log(data);
 
+    // ✅ Handle invalid city name (e.g., 404 error)
+    if (data.cod === "404") {
+        document.querySelector(".city").innerHTML = "City not found";
+        document.querySelector(".temp").innerHTML = "-- °C";
+        document.querySelector(".humidity").innerHTML = "-- %";
+        document.querySelector(".wind").innerHTML = "-- Km/h";
+        return;
+    }
+
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
@@ -26,6 +35,8 @@ async function checkWeather(city) {
         weatherIcon.src = "images/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
         weatherIcon.src = "images/mist.png";
+    } else {
+        weatherIcon.src = "images/clear.png";
     }
 }
 
@@ -33,7 +44,7 @@ searchBtn.addEventListener("click", () => {
     checkWeather(searchBox.value);
 });
 searchBox.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    checkWeather(searchBox.value.trim());
-  }
+    if (event.key === "Enter") {
+        checkWeather(searchBox.value.trim());
+    }
 });
