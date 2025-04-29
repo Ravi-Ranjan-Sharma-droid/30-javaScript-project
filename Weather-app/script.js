@@ -1,0 +1,1 @@
+// https://api.openweathermap.org/data/2.5/weather?q=german&appid=66a59b78e7600456b6c73e2cccf0945c&units=metric

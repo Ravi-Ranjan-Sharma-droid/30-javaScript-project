@@ -31,14 +31,33 @@ No frameworks. No libraries. Just raw, clean code.
 Here’s the list of planned or completed projects:
 
 1. Weather App  
-2. To-Do List  
-3. Quiz App  
-4. Password Generator  
-5. Notes app
-6. Age Calculator
-7. Quote Generator
-8. QR Code Generator
-9. More soon...
+<!-- 2. To-do List App   -->
+<!-- 3. Calculator App   -->
+<!-- 4. Online Quiz App   -->
+<!-- 5. Digital Clock   -->
+<!-- 6. Text To Voice Converter   -->
+<!-- 7. QR Code Generator   -->
+<!-- 8. Random Password Generator   -->
+<!-- 9. Notes App   -->
+<!-- 10. Quote Generator App   -->
+<!-- 11. Toast Notification   -->
+<!-- 12. Music Player   -->
+<!-- 13. Image Search Engine   -->
+<!-- 14. Popup Notification   -->
+<!-- 15. Mini Calendar   -->
+<!-- 16. Image Background Change   -->
+<!-- 17. Stopwatch   -->
+<!-- 18. Hide And Show Password   -->
+<!-- 19. Light & Dark Mode   -->
+<!-- 20. Image Slider   -->
+<!-- 21. Form Validation   -->
+<!-- 22. Drop Down Menu   -->
+<!-- 23. Circular Progress Bar   -->
+<!-- 24. Product Details Page   -->
+<!-- 25. Crypto Webpage   -->
+<!-- 26. Drag and Drop   -->
+<!-- 27. Email Subscription   -->
+<!-- 28. Password Strength Indicator   -->
 
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
