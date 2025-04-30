@@ -6,9 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do-app</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins', sans-serif;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #153677, #4e085f);
+        padding: 10px;
+    }
+
+    .todo-app {
+        width: 35%;
+        min-width: 540px;
+        background: linear-gradient(135deg, #ffffff 0%, #f0f6ff 100%);
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+    }
+
+    .todo-app h2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        color: #002765;
+    }
+
+    .todo-app h2 img {
+        width: 35px;
+        margin-left: 10px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #edeef0;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+        background: #ff5945;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 40px;
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 17px;
+        /* fixed typo here */
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    ul li::before {
+        content: '';
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(images/unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+    }
+    ul li.checked{
+        color: #555;
+        text-decoration: line-through;
+    }
+    ul li.checked::before{
+        background-image: url(images/checked.png);
+    }
+</style>
 
 <body>
-
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List<img src="images/icon.png" alt="pen-and-paper-icon">
+            </h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add you Task">
+                <button>Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 
