@@ -12,9 +12,13 @@ This is a simple, responsive web application that allows users to check real-tim
 This app uses the OpenWeatherMap API to fetch weather data. The current API key is for demonstration purposes only. To use the app with your own key, sign up at [OpenWeatherMap](https://openweathermap.org/api) and replace the API key in `script.js`.
 
 ## Quick Peek
+### While opening 
 ![weather-app-blank](look/blank.png)
+### In working conditions 
 ![weather-app-working](look/working.png)
+### If you enter wrong city name
 ![weather-app-incorrect](look/incorrect.png)
+### If you internet not connected or server busy 
 ![weather-app-network-error](look/network-err.png)
 
 ## License
