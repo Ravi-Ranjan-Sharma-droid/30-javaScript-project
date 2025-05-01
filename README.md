@@ -32,7 +32,7 @@ Here’s the list of planned or completed projects:
 
 1. [Weather App](Weather-app) 
 2. [To-do List App](To-do-app)  
-<!-- 3. Calculator App   -->
+3. [quiz App](Quiz-app)  
 <!-- 4. Online Quiz App   -->
 <!-- 5. Digital Clock   -->
 <!-- 6. Text To Voice Converter   -->
