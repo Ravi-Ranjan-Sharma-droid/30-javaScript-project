@@ -88,6 +88,7 @@ body {
     display: block;
     transition: transform 0.2s ease, opacity 0.3s ease;
     font-size: 1rem;
+    display: none;
 }
 
 #next-btn:hover {
