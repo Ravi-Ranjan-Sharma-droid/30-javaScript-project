@@ -14,83 +14,88 @@
 }
 
 body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Premium gradient */
+    background: #0f172a; /* Deep blue/gray background (used by Apple, GitHub, Meta) */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
+/* App Container */
 .app {
-    background: #ffffff;
-    width: 90%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
     max-width: 600px;
-    margin: 40px auto;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.app:hover {
-    transform: translateY(-4px);
-}
-
+/* Title */
 .app h1 {
     font-size: 28px;
-    color: #1a1a1a;
+    color: #f1f5f9;
     font-weight: 700;
-    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
     padding-bottom: 20px;
 }
 
+/* Quiz Content */
 .quiz {
     padding: 20px 0;
 }
 
 .quiz h2 {
     font-size: 20px;
-    color: #333;
+    color: #e2e8f0;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Buttons */
 .btn {
-    background: #f9f9f9;
-    color: #333;
+    background: #1e293b;
+    color: #f1f5f9;
     font-weight: 500;
     width: 100%;
-    border: 2px solid #dcdcdc;
-    padding: 12px 16px;
-    margin: 8px 0;
+    border: 1px solid #334155;
+    padding: 14px 18px;
+    margin: 10px 0;
     text-align: left;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease-in-out;
 }
 
 .btn:hover {
-    background: #4a90e2;
-    color: #fff;
-    border-color: #4a90e2;
+    background: linear-gradient(90deg, #3b82f6, #6366f1); /* blue to indigo gradient */
+    color: white;
+    border: none;
+    transform: scale(1.02);
 }
 
+/* Next Button */
 #next-btn {
-    background: #4a90e2;
-    color: #fff;
+    background: linear-gradient(90deg, #10b981, #06b6d4); /* green to cyan */
+    color: white;
     font-weight: 600;
     width: 160px;
-    border: none;
-    padding: 12px 0;
+    padding: 14px 0;
     margin: 30px auto 0;
-    border-radius: 8px;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
     display: block;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #next-btn:hover {
-    background: #357ab8;
+    opacity: 0.9;
+    transform: scale(1.03);
 }
 
     </style>
