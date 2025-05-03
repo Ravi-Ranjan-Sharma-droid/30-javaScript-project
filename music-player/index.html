@@ -6,112 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Player</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'poppins' sans-serif;
-            box-sizing: border-box;
-        }
+      * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
 
-        .container {
-            width: 100%;
-            height: 100vh;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+body {
+    background: radial-gradient(circle at top left, #1c1f2b, #12141d);
+    color: #e5e5e5;
+}
 
-        .music-player {
-            background: #ffe0e5;
-            width: 400px;
-            padding: 25px 35px;
-            text-align: center;
-        }
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
+.music-player {
+    background: #1e212d;
+    width: 380px;
+    padding: 35px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
 
-        nav .circle {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            background: #fff;
-            color: #f53192;
-            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
 
-        .song-img {
-            width: 220px;
-            border-radius: 50%;
-            border: 8px solid white;
-            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
-        }
+nav .circle {
+    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    background: #2a2d3d;
+    color: #a0a3b1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05), 0 2px 6px rgba(0, 0, 0, 0.2);
+}
 
-        .music-player h1 {
-            font-size: 20px;
-            font-weight: 400;
-            color: #333;
-            margin-top: 20px;
-        }
+.song-img {
+    width: 180px;
+    border-radius: 20px;
+    border: 5px solid #2f3344;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
 
-        .music-player p {
-            font-size: 14px;
-            color: #333;
-            margin-top: 5px;
-        }
+.music-player h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fafafa;
+    margin-top: 20px;
+}
 
-        #progress {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 6px;
-            background: #f53192;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 40px 0;
-        }
+.music-player p {
+    font-size: 15px;
+    color: #b0b3c1;
+    margin-top: 6px;
+}
 
-        #progress::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            background: #f53192;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 8px solid #fff;
-            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
-        }
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #3a3f52;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 35px 0;
+}
 
-        .controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #6c63ff;
+    width: 22px;
+    height: 22px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.2);
+    transition: background 0.3s ease;
+}
 
-        .controls div {
-            width: 60px;
-            height: 60px;
-            margin: 20px;
-            background: #fff;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: #f53192;
-            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
-            cursor: pointer;
-        }
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .controls div:nth-child(2) {
-            transform: scale(1.5);
-            background: #f53192;
-            color: #fff;
-        }
-    </style>
+.controls div {
+    width: 56px;
+    height: 56px;
+    margin: 16px;
+    background: #2a2d3d;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: #c0c3d0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+.controls div:hover {
+    background: #343850;
+    transform: scale(1.1);
+}
+
+.controls div:nth-child(2) {
+    transform: scale(1.2);
+    background: #6c63ff;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(108, 99, 255, 0.4);
+}
+</style>
     <script src="https://kit.fontawesome.com/08a5d0643f.js" crossorigin="anonymous"></script>
 </head>
 
