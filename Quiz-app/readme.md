@@ -17,10 +17,10 @@ A simple, fully responsive and interactive quiz application built using **HTML**
 
 ## 🖼 Preview
 
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="look/start.png" width="200"/>
-  <img src="look/wrong.png" width="200"/>
-  <img src="look/leaderboard.png" width="200"/>
+<div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: center;">
+  <img src="look/start.png" style="width: 270px;" />
+  <img src="look/wrong.png" style="width: 270px;" />
+  <img src="look/leaderboard.png" style="width: 270px;" />
 </div>
 
 
