@@ -105,7 +105,8 @@
             box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
             cursor: pointer;
         }
-        .controls div:nth-child(2){
+
+        .controls div:nth-child(2) {
             transform: scale(1.5);
             background: #f53192;
             color: #fff;
@@ -131,19 +132,23 @@
             </h1>
             <p>XloveSF</p>
 
-            <audio controls>
+            <audio id="song">
                 <source src="media/musics.mp3" type="audio/mpeg">
             </audio>
             <input type="range" value="0" id="progress">
 
             <div class="controls">
                 <div><i class="fa-solid fa-backward"></i></div>
-                <div><i class="fa-solid fa-play"></i></div>
+                <div onclick="playPause()">
+                    <i id="ctrlIcon" class="fa-solid fa-play"></i>
+                </div>
+
                 <div><i class="fa-solid fa-forward"></i></div>
             </div>
 
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>
