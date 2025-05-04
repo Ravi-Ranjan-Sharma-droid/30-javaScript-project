@@ -16,7 +16,7 @@ A simple, clean, and responsive To-Do List web application built using **HTML**,
   <img src="look/demo.png" style="width: 220px;" />
   <img src="look/storeData.png" style="width: 250px;" />
 </div>
----
+
 
 
 

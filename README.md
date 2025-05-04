@@ -33,8 +33,8 @@ Here’s the list of planned or completed projects:
 1. [Weather App](Weather-app) 
 2. [To-do List App](To-do-app)  
 3. [quiz App](Quiz-app)  
-4. [Music-Player](music-player)
-
+4. [Music Player](music-player-app)
+5. [Text to Speech](Text-to-voice-app)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---

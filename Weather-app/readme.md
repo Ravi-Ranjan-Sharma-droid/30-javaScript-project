@@ -19,6 +19,7 @@ This app uses the OpenWeatherMap API to fetch weather data. The current API key 
   <img src="look/incorrect.png" style="width: 250px;" />
   <img src="look/network-err.png" style="width: 250px;" />
 </div>
+
 ---
 ## License
 This project is open source and available under the MIT License.
