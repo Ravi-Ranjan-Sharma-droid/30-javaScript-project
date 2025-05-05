@@ -35,6 +35,7 @@ Here’s the list of planned or completed projects:
 3. [quiz App](Quiz-app)  
 4. [Music Player](music-player-app)
 5. [Text to Speech](Text-to-voice-app)
+6. [Toast Notification](Tost-notification)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
