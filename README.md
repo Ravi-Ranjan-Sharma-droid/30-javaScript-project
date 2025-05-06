@@ -36,6 +36,7 @@ Here’s the list of planned or completed projects:
 4. [Music Player](music-player-app)
 5. [Text to Speech](Text-to-voice-app)
 6. [Toast Notification](Tost-notification)
+7. [Drag Drop](Drag-and-drop)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
