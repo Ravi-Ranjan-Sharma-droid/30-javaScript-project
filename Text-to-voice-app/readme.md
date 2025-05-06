@@ -1,3 +1,6 @@
+[home](/README.md)
+
+
 # Text to Speech Converter
 
 A clean and interactive web application that converts written text into spoken voice using the Web Speech API. Users can input any text, select from available voices, and listen to the spoken output.

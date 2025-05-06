@@ -9,39 +9,70 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: 'poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0423;
+            color: #fff;
         }
 
         .container {
             width: 100%;
             min-height: 100vh;
-            background: #0b0423;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 40px;
+            gap: 40px;
         }
 
         #left,
         #right {
-            width: 300px;
-            min-height: 400px;
-            margin: 20px;
-            border: 2px dashed #fff;
+            width: 340px;
+            min-height: 440px;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 25px 15px;
+            background-color: #140933;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .list{
-            background: #e91e63;
-            height: 60px;
-            margin: 30px;
+
+        #left:hover,
+        #right:hover {
+            background-color: #1d0c47;
+            transform: scale(1.02);
+        }
+
+        .list {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            height: 65px;
+            margin: 20px 10px;
             color: #fff;
             display: flex;
             align-items: center;
             cursor: grab;
+            border-radius: 12px;
+            padding: 0 18px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 12px rgba(255, 65, 108, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .list img{
-            width: 10px;
-            margin-right: 15px;
-            margin-left: 20px;
+
+        .list:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(255, 75, 43, 0.5);
+        }
+
+        .list img {
+            width: 18px;
+            height: 18px;
+            margin-right: 18px;
+            filter: brightness(0) invert(1);
         }
     </style>
 </head>
@@ -49,10 +80,10 @@
 <body>
     <div class="container">
         <div id="left">
-            <div class="list" draggable="true"><img src="drag_drop_icon.png" alt="drop_icon">List Item 1</div>
-            <div class="list" draggable="true"><img src="drag_drop_icon.png" alt="drop_icon">List Item 2</div>
-            <div class="list" draggable="true"><img src="drag_drop_icon.png" alt="drop_icon">List Item 3</div>
-            <div class="list" draggable="true"><img src="drag_drop_icon.png" alt="drop_icon">List Item 4</div>
+            <div class="list" draggable="true"><img src="look/drag_drop_icon.png" alt="drop_icon">List Item 1</div>
+            <div class="list" draggable="true"><img src="look/drag_drop_icon.png" alt="drop_icon">List Item 2</div>
+            <div class="list" draggable="true"><img src="look/drag_drop_icon.png" alt="drop_icon">List Item 3</div>
+            <div class="list" draggable="true"><img src="look/drag_drop_icon.png" alt="drop_icon">List Item 4</div>
         </div>
         <div id="right"></div>
     </div>
@@ -60,22 +91,22 @@
         let lists = document.getElementsByClassName("list");
         let rightBox = document.getElementById("right")
         let leftBox = document.getElementById("left")
-        for(list of lists){
-            list.addEventListener("dragstart", function(e){
+        for (list of lists) {
+            list.addEventListener("dragstart", function (e) {
                 let selected = e.target;
 
-                rightBox.addEventListener("dragover", function(e){
+                rightBox.addEventListener("dragover", function (e) {
                     e.preventDefault()
                 })
-                rightBox.addEventListener("drop", function(e){
+                rightBox.addEventListener("drop", function (e) {
                     rightBox.appendChild(selected);
                     selected = null;
                 });
 
-                leftBox.addEventListener("dragover", function(e){
+                leftBox.addEventListener("dragover", function (e) {
                     e.preventDefault()
                 })
-                leftBox.addEventListener("drop", function(e){
+                leftBox.addEventListener("drop", function (e) {
                     leftBox.appendChild(selected);
                     selected = null;
                 });

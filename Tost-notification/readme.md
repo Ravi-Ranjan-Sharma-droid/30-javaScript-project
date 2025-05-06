@@ -1,3 +1,6 @@
+[home](/README.md)
+
+
 # Toast Notification Project
 
 This is a simple and responsive Toast Notification system built using HTML, CSS, and JavaScript. It features four types of notifications: Success, Error, Invalid, and Working (in-progress), each with its own color scheme and animation.

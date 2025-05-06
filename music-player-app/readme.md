@@ -1,3 +1,6 @@
+[home](/README.md)
+
+
 # Song Player Web App
 
 A sleek and responsive song player web application built using HTML, CSS, and JavaScript. This player includes basic controls such as play, pause, forward, and backward, and features a custom progress bar with a clean, modern UI.

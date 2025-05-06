@@ -1,3 +1,6 @@
+[home](/README.md)
+
+
 # Weather App
 
 This is a simple, responsive web application that allows users to check real-time weather data for any city. By entering a city name, users can view the current temperature, humidity, wind speed, and an icon representing the weather conditions. The app utilizes the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface.
