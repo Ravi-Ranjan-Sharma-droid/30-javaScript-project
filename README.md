@@ -37,6 +37,7 @@ Here’s the list of planned or completed projects:
 5. [Text to Speech](Text-to-voice-app)
 6. [Toast Notification](Tost-notification)
 7. [Drag Drop](Drag-and-drop)
+8. [Password Show-Hide](Hide-show-password/)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
@@ -45,7 +46,7 @@ Here’s the list of planned or completed projects:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/30-Days-JS-Projects.git
+git clone https://github.com/Ravi-Ranjan-Sharma-droid/30-javaScript-project.git
 ```
 
 2. Navigate into a specific project:

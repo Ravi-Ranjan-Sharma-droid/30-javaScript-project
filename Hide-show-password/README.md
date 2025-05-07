@@ -1,3 +1,6 @@
+[home](/README.md)
+
+
 # Password Visibility Toggle
 
 A simple and elegant password input field with a toggle feature to show/hide the password. This project demonstrates a clean implementation of password visibility control using HTML, CSS, and JavaScript.
