@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0 8%;
+        }
+
+        .logo {
+            width: 120px;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        .content {
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        .content h1 {
+            font-size: 64px;
+            font-weight: 600;
+        }
+
+        .content h1 span {
+            color: #ff375f;
+        }
+
+        .content button {
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            padding: 12px 25px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .content button img {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .launch-time {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .launch-time div {
+            flex-basis: 100px;
+        }
+
+        .launch-time div p {
+            font-size: 60px;
+            margin-top: 10px;
+        }
+
+        .rocket {
+            width: 250px;
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            animation: rocket 4s linear infinite;
+        }
+
+        @keyframes rocket {
+            0% {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            100% {
+                bottom: 105%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="logo" class="logo">
+        <div class="content">
+            <p>We is Under Maintenance</p>
+            <h1>We're soon <span>Launching</span> Soon</h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <button type="button">Learn More <img src="images/triangle.png" alt="triangle"></button>
+        </div>
+        <div class="rocket">
+            <img src="images/rocket.png" alt="rocket">
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date('July 10, 2025 00:00:00').getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
