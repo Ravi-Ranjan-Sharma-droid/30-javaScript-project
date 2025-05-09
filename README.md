@@ -39,6 +39,7 @@ Here’s the list of planned or completed projects:
 7. [Drag Drop](Drag-and-drop)
 8. [Password Show-Hide](Hide-show-password/)
 9. [Launching details page](launching)
+9. [Email push-in googleSheet](Email-Subscription)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
