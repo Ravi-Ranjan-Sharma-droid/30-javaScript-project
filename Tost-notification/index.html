@@ -6,97 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tost Notification</title>
     <script src="https://kit.fontawesome.com/08a5d0643f.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "poppins", sans-serif;
-            box-sizing: border-box;
-        }
-        body{
-            background: #f7edff;
-        }
-        .buttons{
-            margin: 50px;
-
-        }
-        .buttons button{
-            background: #333;
-            color: #fff;
-            border: 0;
-            outline: 0;
-            width: 120px;
-            height: 40px;
-            margin: 5px;
-            cursor: pointer;
-        }
-        #toastBox{
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .toast{
-            width: 400px;
-            height: 80px;
-            background: #fff;
-            font-weight: 500;
-            margin: 15px 0;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            position: relative;
-            transform: translateX(100%);
-            animation: moveLeft 0.5s linear forwards;
-        }
-        @keyframes moveLeft {
-            100%{
-                transform: translateX(0);
-            }
-        }
-        .toast i{
-            margin: 0px 20px;
-            font-size: 35px;
-            color: green;
-        }
-        .toast.error i{
-            color: red;
-        }
-        .toast.invalid i{
-            color: orange;
-        }
-        .toast.working i{
-            color: #607d8b;
-        }
-        .toast::after{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 5px;
-            background: green;
-            animation: snorlax 6s linear forwards;
-        }
-        @keyframes snorlax {
-            100%{
-                width: 0;
-            }
-        }
-        .toast.error::after{
-            background: red;
-        }
-        .toast.invalid::after{
-            background: orange;
-        }
-        .toast.working::after{
-            background: #607d8b;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -109,35 +19,7 @@
     <div id="toastBox">
 
     </div>
-    <script>
-        let toastBox = document.getElementById("toastBox");
-        let successMsg = '<i class="fa-solid fa-circle-check"></i> Successfully submitted'
-        let errorMsg = '<i class="fa-solid fa-circle-xmark"></i> Unknown Error occurred'
-        let invalidMsg = '<i class="fa-solid fa-circle-exclamation"></i> Invalid input, check again'
-        let workingMsg = '<i class="fa-solid fa-screwdriver-wrench"></i> Working on this feature'
-
-        function showTost(msg){
-          let toast =  document.createElement('div');
-          toast.classList.add('toast')
-          toast.innerHTML = msg;
-          toastBox.appendChild(toast);
-
-          if(msg.includes('Error')){
-            toast.classList.add('error')
-          }
-          if(msg.includes('Invalid')){
-            toast.classList.add('invalid')
-          }
-          if(msg.includes('Working')){
-            toast.classList.add('working')
-          }
-
-          setTimeout(() => {
-            toast.remove();
-          }, 6000);
-
-        }
-    </script>
+<script src="script.js"></script>
 </body>
 
 </html>

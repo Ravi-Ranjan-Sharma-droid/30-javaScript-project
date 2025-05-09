@@ -27,14 +27,6 @@ This is a simple and responsive Toast Notification system built using HTML, CSS,
 </div>
 
 
-## 📁 Project Structure
-
-```
-├── index.html
-```
-
-All code is contained in a single HTML file for simplicity.
-
 ## 🚀 How It Works
 
 * Clicking any of the four buttons triggers a specific toast message.
