@@ -5,19 +5,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Thief with Your Image</title>
-    <link rel="stylesheet" href="style.css">
-   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            transition: background-color 0.6s ease;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            transition: all 0.3s ease;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+        .upload-area {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            padding: 2rem;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #888;
+        }
+
+        .upload-area input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .upload-label {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3b78c3;
+        }
+
+        #preview {
+            display: none;
+            margin-top: 1.5rem;
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            max-height: 280px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #preview.show {
+            display: block;
+        }
+
+        #preview:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .upload-area {
+                padding: 1.25rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h2>Select an Image to Change Background</h2>
-        <input type="file" id="fileInput" accept="image/*">
+        <h2>Upload an Image to Set Background</h2>
+        <label class="upload-area">
+            <span class="upload-label">Click or drag to upload image</span>
+            <input type="file" id="fileInput" accept="image/*" />
+        </label>
         <img id="preview" crossorigin="anonymous" />
+        <button class="btn" onclick="fileInput.click()">Choose Image</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
-    <script src="logic.js"></script>
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const preview = document.getElementById("preview");
+        const colorThief = new ColorThief();
+
+        fileInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    preview.src = e.target.result;
+                    preview.classList.add("show");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        preview.addEventListener("load", () => {
+            if (preview.complete && preview.naturalHeight !== 0) {
+                try {
+                    const color = colorThief.getColor(preview);
+                    document.body.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                } catch (error) {
+                    console.error("Color extraction failed:", error);
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

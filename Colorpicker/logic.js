@@ -8,6 +8,7 @@ fileInput.addEventListener("change", (event) => {
     const reader = new FileReader();
     reader.onload = (e) => {
       preview.src = e.target.result;
+      preview.classList.add("show");
     };
     reader.readAsDataURL(file);
   }

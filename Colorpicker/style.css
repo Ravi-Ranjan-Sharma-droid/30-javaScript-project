@@ -1,57 +1,128 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.6s ease;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            transition: background-color 0.6s ease;
+        }
 
-.container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-}
+        .container {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            transition: all 0.3s ease;
+        }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #222;
-}
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
 
-input[type="file"] {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
-    margin-bottom: 1rem;
-    cursor: pointer;
-}
+        .upload-area {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            padding: 2rem;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
 
-#preview {
-    display: block;
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 1rem;
-    object-fit: cover;
-    max-height: 250px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
+        .upload-area:hover {
+            border-color: #888;
+        }
 
-#preview:hover {
-    transform: scale(1.02);
-}
+        .upload-area input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .upload-label {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3b78c3;
+        }
+
+        #preview {
+            display: none;
+            margin-top: 1.5rem;
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            max-height: 280px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #preview.show {
+            display: block;
+        }
+
+        #preview:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .upload-area {
+                padding: 1.25rem;
+            }
+        }
