@@ -5,32 +5,35 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            background: #8296b3;
             color: #333;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
             transition: background-color 0.6s ease;
         }
 
         .container {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 100%;
-            max-width: 600px;
+            max-width: 320px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #222;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
         }
 
         .upload-area {
@@ -40,9 +43,9 @@
             align-items: center;
             justify-content: center;
             border: 2px dashed #ccc;
-            border-radius: 12px;
-            padding: 2rem;
-            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
             transition: border-color 0.3s;
             cursor: pointer;
         }
@@ -60,8 +63,8 @@
         }
 
         .upload-label {
-            font-size: 1.1rem;
-            color: #555;
+            font-size: 0.9rem;
+            color: #fff;
         }
 
         .btn {
@@ -69,9 +72,9 @@
             background-color: #4a90e2;
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            border-radius: 8px;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            border-radius: 6px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -82,47 +85,22 @@
 
         #preview {
             display: none;
-            margin-top: 1.5rem;
-            width: 100%;
-            border-radius: 12px;
-            object-fit: cover;
-            max-height: 280px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            max-height: 180px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
         #preview.show {
             display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #preview:hover {
             transform: scale(1.03);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 2rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 1.25rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .upload-area {
-                padding: 1.25rem;
-            }
         }
