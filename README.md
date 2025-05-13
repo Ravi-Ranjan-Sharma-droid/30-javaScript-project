@@ -40,7 +40,8 @@ Here’s the list of planned or completed projects:
 8. [Password Show-Hide](Hide-show-password)
 9. [Launching details page](launching)
 10. [Email push-in googleSheet](Email-Subscription)
-11. [dominant color extractor](Colorpicker)
+11. [Dominant color extractor](Colorpicker)
+12. [Password Strength Checker](Password-Strength)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
