@@ -1,18 +1,37 @@
-let string = "";
-let buttons = document.querySelectorAll(".button");
-Array.from(buttons).forEach((button) => {
-    button.addEventListener("click", (e) => {
-        if (e.target.innerHTML == "=") {
-            string = eval(string);
-            document.querySelector("input").value = string;
-        } 
-       else if (e.target.innerHTML == "C") {
-            string = "";
-            document.querySelector("input").value = string;
-        } else {
-            console.log(e.target);
-            string = string + e.target.innerHTML;
-            document.querySelector("input").value = string;
-        }
-    });
-});
+        let string = "";
+        let memory = 0;
+        const inputField = document.querySelector(".input");
+
+        document.querySelectorAll(".button").forEach(button => {
+            button.addEventListener("click", e => {
+                const value = e.target.innerText;
+                switch (value) {
+                    case "=":
+                        try {
+                            string = eval(string).toString();
+                        } catch (e) {
+                            string = "Error";
+                        }
+                        break;
+                    case "C":
+                        string = "";
+                        break;
+                    case "M+":
+                        memory = parseFloat(string || "0") + memory;
+                        break;
+                    case "M-":
+                        memory = memory - parseFloat(string || "0");
+                        break;
+                    case "%":
+                        try {
+                            string = (parseFloat(string) / 100).toString();
+                        } catch (e) {
+                            string = "Error";
+                        }
+                        break;
+                    default:
+                        string += value;
+                }
+                inputField.value = string;
+            });
+        });
