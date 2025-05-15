@@ -42,7 +42,7 @@ Here’s the list of planned or completed projects:
 10. [Email push-in googleSheet](Email-Subscription)
 11. [Dominant color extractor](Colorpicker)
 12. [Password Strength Checker](Password-Strength)
-13. [Calculator](Calculator)
+13. [Calculator](calculator)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
