@@ -43,7 +43,7 @@ Here’s the list of planned or completed projects:
 11. [Dominant color extractor](Colorpicker)
 12. [Password Strength Checker](Password-Strength)
 13. [Calculator](calculator)
-13. [Image-Editor](Image-Editor)
+14. [Image-Editor](Image-Editor)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
