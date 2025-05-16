@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Canvas Image Editor</h2>
+
+        <input type="file" id="upload" accept="image/*">
+
+        <div class="canvas-wrapper">
+            <div class="canvas-section">
+                <h3>Original</h3>
+                <canvas id="originalCanvas"></canvas>
+            </div>
+
+            <div class="canvas-section">
+                <h3>Edited</h3>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="invertImage()">Invert</button>
+            <button onclick="mirrorImage()">Mirror</button>
+            <button onclick="blurImage()">Blur</button>
+            <button onclick="enhanceImage()">Enhance</button>
+            <button onclick="flipImage()">Upside Down</button>
+            <button onclick="resetImage()">Reset</button>
+            <button onclick="downloadImage()">Download</button>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
