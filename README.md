@@ -28,7 +28,7 @@ No frameworks. No libraries. Just raw, clean code.
 
 ## Projects (Day-Wise Plan)
 
-Here’s the list of planned or completed projects:
+Here’s the list of completed projects:
 
 1. [Weather App](Weather-app) 
 2. [To-do List App](To-do-app)  
