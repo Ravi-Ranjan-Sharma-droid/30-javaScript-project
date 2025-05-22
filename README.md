@@ -44,6 +44,7 @@ Here’s the list of completed projects:
 12. [Password Strength Checker](Password-Strength)
 13. [Calculator](calculator)
 14. [Image-Editor](Image-Editor)
+15. [Subscription UI](subscription)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
