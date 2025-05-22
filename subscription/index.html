@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Subscription Plans UI</h1>
+            <p>Choose the plan that fits your needs. All plans include our core functionality.</p>
+        </header>
+        <div class="pricing-cards">
+
+            <!-- Basic Plan -->
+            <div class="card basic">
+                <div class="card-header">
+                    <h2>Basic</h2>
+                    <div class="price">Free</div>
+                    <p>Perfect for occasional needs</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Access to limited features</li>
+                        <li><i class="fas fa-check"></i> Up to 5 tasks per day</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-wrapper">
+                        <button onclick="showToast('No backend support', 'error')" ; class="btn outline">Get
+                            Started</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="card pro">
+                <div class="popular-tag">Most Popular</div>
+                <div class="card-header">
+                    <h2>Pro</h2>
+                    <div class="price">$9.99<span>/month</span></div>
+                    <p>Ideal for regular management</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
+                        <li><i class="fas fa-check"></i> Enhanced analytics dashboard</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Priority processing</li>
+                        <li><i class="fas fa-check"></i> No advertisements</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-wrapper">
+                        <button onclick="showToast('No backend support', 'error')" class="btn primary">Subscribe
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Plan -->
+            <div class="card business">
+                <div class="card-header">
+                    <h2>Business</h2>
+                    <div class="price">$19.99<span>/month</span></div>
+                    <p>For teams and professional use</p>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Everything in Business</li>
+                        <li><i class="fas fa-check"></i> Team collaboration tools</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> SLA guaranteed uptime</li>
+                        <li><i class="fas fa-check"></i> Custom solutions</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-wrapper">
+                        <button onclick="showToast('No backend support', 'error')" ; class="btn outline">Subscribe
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="toastBox"></div>
+    <script src="js/toast.js"></script>
+</body>
+
+</html>

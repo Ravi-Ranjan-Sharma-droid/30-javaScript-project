@@ -1,0 +1,146 @@
+.buttons {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.buttons button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#toastBox {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 18px 20px;
+    border-left: 6px solid;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+    max-width: 400px;
+    position: relative;
+    animation: bounceIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateX(-10%) scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.toast i {
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.toast .msg {
+    flex: 1;
+    font-weight: 500;
+}
+
+.toast .close {
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: color 0.2s ease;
+}
+
+.toast .close:hover {
+    color: #000;
+}
+
+.toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: currentColor;
+    animation: shrink 2s linear forwards;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@keyframes shrink {
+    to {
+        width: 0;
+    }
+}
+
+/* Type Colors */
+.toast.success {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.toast.error {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.toast.invalid {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.toast.working {
+    border-color: #607d8b;
+    color: #607d8b;
+}
+
+@media (max-width: 500px) {
+    #toastBox {
+        right: 10px;
+        left: 10px;
+        bottom: 20px;
+        align-items: center;
+    }
+
+    .toast {
+        width: 100%;
+        max-width: 90vw;
+    }
+}
