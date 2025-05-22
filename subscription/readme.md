@@ -58,20 +58,16 @@ showToast("No backend support", "error");
 
 * [Font Awesome 6](https://cdnjs.com/libraries/font-awesome)
 
-## 🛠 How to Run
-
-1. Clone or download this repository.
-2. Open `index.html` in any modern browser.
-3. Click buttons to trigger toast notifications.
-
 ## ⚠️ Notes
 
 * Currently, the buttons simulate interactions with toast messages. No backend functionality is integrated.
 * Ideal for mockups or frontend-only demos.
 
-## 📸 Screenshots
+## 🖼 Preview
 
-*Include screenshots here if needed.*
+<div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: center;">
+  <img src="image.png" style="width: 270px;" />
+</div>
 
 ---
 
