@@ -46,6 +46,7 @@ Here’s the list of completed projects:
 14. [Image-Editor](Image-Editor)
 15. [Subscription UI](subscription)
 16. [List Maker](list-maker)
+17. [Attendance Maker](Attendance-Maker)
 > I’ll keep updating the list with links and live demos after completing each day’s project.
 
 ---
