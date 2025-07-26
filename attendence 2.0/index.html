@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Logger</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Attendance Logger</h1>
+            <div class="header-controls">
+                <nav class="menu-bar">
+                    <ul>
+                        <li><a href="#attendance-form-section"><i class="fas fa-user-plus"></i> Attendance Form</a></li>
+                        <li class="dropdown">
+                            <a href="#attendance-log-section" class="dropdown-toggle"><i class="fas fa-list"></i>
+                                Attendance Log <i class="fas fa-caret-down"></i></a>
+                        </li>
+                        <li><a href="#delete-data-section"><i class="fas fa-trash"></i> Delete Data</a></li>
+                    </ul>
+                </nav>
+                <button id="dark-mode-toggle" class="btn icon-btn" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="hamburger-menu" class="btn icon-btn" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>Menu</h2>
+                <button id="close-sidebar" class="btn icon-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#attendance-form-section"><i class="fas fa-user-plus"></i> Attendance Form</a></li>
+                    <li><a href="#attendance-log-section"><i class="fas fa-list"></i> Attendance Log</a></li>
+                    <li><a href="#delete-data-section"><i class="fas fa-trash"></i> Delete Data</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="overlay" class="overlay"></div>
+
+        <main>
+            <div class="attendance-form" id="attendance-form-section">
+                <div class="input-group">
+                    <input type="text" id="student-name" placeholder="Enter student name" required>
+                    <div id="name-suggestions" class="suggestions"></div>
+                </div>
+                <div class="button-group">
+                    <button id="mark-entry" class="btn entry">Mark Entry</button>
+                    <button id="mark-exit" class="btn exit">Mark Exit</button>
+                </div>
+            </div>
+
+            <div class="daily-summary">
+                <h2>Today's Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card" id="total-present-card">
+                        <h3>Total Present</h3>
+                        <p id="total-present">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Average Duration</h3>
+                        <p id="avg-duration">0h 0m</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="present-students-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Currently Present Students</h2>
+                        <button class="close-modal btn icon-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="present-students-list"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attendance-log" id="attendance-log-section">
+                <div class="log-header">
+                    <h2>Attendance Log</h2>
+                    <div class="export-buttons">
+                        <button id="export-csv" class="btn secondary">
+                            <i class="fas fa-file-csv"></i> Export CSV
+                        </button>
+                        <button id="export-pdf" class="btn secondary">
+                            <i class="fas fa-file-pdf"></i> Export PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-student" placeholder="Search by student name...">
+                    <div id="search-suggestions" class="suggestions"></div>
+                </div>
+                <div class="table-container">
+                    <table id="log-table">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Student Name</th>
+                                <th>Entry Time</th>
+                                <th>Exit Time</th>
+                                <th>Time Spent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="log-body">
+                            <!-- Attendance logs will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="delete-data-section" id="delete-data-section">
+                <h2>Delete All Attendance Data</h2>
+                <p>Type "delete" in the box below and click the button to permanently delete all attendance records.</p>
+                <div class="input-group">
+                    <input type="text" id="delete-confirm" placeholder="Type 'delete' to confirm">
+                </div>
+                <button id="delete-data-btn" class="btn danger">Delete All Data</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Attendance Logger App &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
